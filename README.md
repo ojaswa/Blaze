@@ -10,7 +10,7 @@ Blaze provides the following volume analysis and rendering capabilities:
 3. The user can create 2D graph based TF and display selective volume materials/segments, and
 4. Detect and remove background.
 
-
+---
 The code corrsponds to the following CGF publication and is allowed to be used for academic and research purpose (non-commercial):  
 *[Ojaswa Sharma, Tushar Arora, and Apoorv Khattar. "Graph based transfer function for volume rendering." Computer Graphics Forum, 2019](https://google.com).*  
 Please cite the paper in case you choose to use this code.
