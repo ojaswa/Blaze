@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../icons/open_volume.png</file>
+        <file>../icons/LH.png</file>
+        <file>../icons/kmeans.png</file>
+        <file>../icons/save.png</file>
+        <file>../icons/TF1D.png</file>
+        <file>../icons/TF2D.png</file>
+        <file>../icons/render_settings.png</file>
+        <file>../icons/material_graph.png</file>
+        <file>../icons/update.png</file>
+        <file>../icons/screenshot.png</file>
+        <file>../icons/save_color_volume.png</file>
+        <file>../icons/material_settings.png</file>
+        <file>../icons/material_save.png</file>
+        <file>../icons/material_open.png</file>
+    </qresource>
+</RCC>

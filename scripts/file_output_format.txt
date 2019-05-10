@@ -1,0 +1,100 @@
+File name: materials.txt
+File description: Materials detected after first material detection
+File output Format: 
+<number of materials (say n)>
+followed by n lines of ...
+<mean of material i> <std dev. of material i>
+# -------------------------------------------------------------------------------
+File name: lh_graph.txt
+File description: saves information regarding each LH cluster 
+File output Format:
+<Total number of L,H data distributions found (say n which is always even)>
+followed by (n/2) line of ...
+<mean of distribution along H> <Std. dev along H> <mean of distribution along L> <std dev. along L>\n
+# -------------------------------------------------------------------------------
+File name: material_reduce.txt
+File description: saves the final material points found after second step of refinement
+File output Format:
+<Total number materials (say n))>
+followed by n lines of ...
+<mean value of that material distribution> <std dev. of that material distribution> <R value assigned (int 0-255) > <G values assigned (int 0-255)> <B value assigned (int 0-255)> <Alpha value assigned (int 0-255)>\n
+after n lines ... 
+<minimum occlussion value> <maximum occlusion value>\n
+# -------------------------------------------------------------------------------
+File name: material_graph.txt
+File description: saves the edges of the optimal graph found
+File output format:
+<number of vertices>,<number of edges (say E)>
+followed by E lines of ...
+<edge end point 1 (material index in materials.txt) >,<edge end point 2 (material index in materials.txt) >
+# -------------------------------------------------------------------------------
+File name: convexhull.txt
+File description: Saves the information about each of the cluster hull corresponding to clusters in occlusion-intensity space
+File output Format:
+<Total hulls (say n)>
+followed by n lines of ...
+<material index inclusing that cluster>\n
+<Mean intensity of the cluster>, <mean occlusion of the cluster>\n
+< intensity of point 1 , intensity of point 2 , intensity of point 3 ... intensity of point k (where k is the total number of pints in that hull)>\n
+< occlusion of point 1 , occlusion of point 2 , occlusion of point 3 ... occlusion of point k (where k is the total number of pints in that hull)>\n
+
+# -------------------------------------------------------------------------------
+File name: contourpoints.txt
+File description: Saves the information about each of the contours of the clusters corresponding to clusters in occlusion-intensity space
+File output Format:
+<Total contours (say n)>
+followed by n lines of ...
+	<material index inclusing that cluster>,<number of polygons (say p)>\n
+	followed by p lines of ...
+	<number of points in polygon boundary (say k)>
+	< intensity of point 1 , intensity of point 2 , intensity of point 3 ... intensity of point k>\n
+	< occlusion of point 1 , occlusion of point 2 , occlusion of point 3 ... occlusion of point k>\n
+
+(tab only for understanding, actual file does not have tabs).
+
+# -------------------------------------------------------------------------------
+File name: esepth.txt
+File description: Contains weighted and non weighted seperation energy for graph corresponding to each threshhold.
+File Output Format:
+<Total number of graphs (say n)>
+followed by n lines of ... 
+<threshold>,<number of vertices>,<number of edges>,<weighted seperation energy>,<non-weighted seperation energy>\n
+# -------------------------------------------------------------------------------
+File name: graphs.txt
+File description: contains all the information for each graph corresponding to each threshold value.
+File output Format:
+<Total number of graphs (say n)>
+followed by n lines of ... 
+<number of vertices (say V)>,<threshhold value>\n
+<mu1>,<mu2>, ..., <muV>\n
+<std1>,<std2>, ... ,<stdV>\n
+<class size 1>,<class size 2>, ... ,<class size V>\n
+<class span 1>,<class span 2>, ... ,<class span V>\n
+[<edge 1 end 1>, <edge 1 end 2>],[<edge 2 end 1>, <edge 2 end 2>], ... ,[<edge E end 1>, <edge E end 2>]\n
+# -------------------------------------------------------------------------------
+File name: hlssclus.p
+File description: intermediate file for saving data of clustering and their labels
+File output format:
+pickle read in order: meanHL(holds all the means of the material clusters),stdHL(holds all the stadard deviation of the material clusters),classSize(holds class size of all the material clusters) ,coordData(sub sampled data for L and H).
+# -------------------------------------------------------------------------------
+File name: graphsf.p
+File description: intermediate file containingall the graph data
+File output format: 
+pickle read in the order: graphs(a list containing all the information of all the graph in the order: num of vertices, vertices(mu), edges(mat idx 1,mat idx 2), material deviation(stds), class sizes, class spans, threshold), sep_mean_w(weighted seperation energy), sep_mean_nw(non weighted seperation energy).
+# -------------------------------------------------------------------------------
+File name: lh_vals.txt
+File description: all LH data points sub sampled and their cluster labels after meanshift clustering on it.
+File output format:
+<Number of points (say n)>,<number of labels (say k)>
+followed by n lines of ...
+<H value>,<L value>,<cluster label (in [-1 to k-1])>
+# -------------------------------------------------------------------------------
+File name: ss_vals.txt
+File description: all occ int data points sub sampled and their material labels after clustering and label allocation
+File output format:
+<number of points (say n)>,<number of materials (Say m)>
+followed by n lines of ...
+<intensity>,<occlusion>,<material label (in [0,m-1])>
+# -------------------------------------------------------------------------------
+
+

@@ -1,0 +1,24 @@
+File Description: 
+LHDataAnalysis.py - used for reading the LH data, cluster the LH space and making the initial graph to be fed to occint.py for graph refinement.
+occint.py - used for reading the occlusion - intensity data, cluster the space and use the information to refinr the graph created. 
+graph_adhoc.py - contains the algorithm for robust graph deduction from the LH clusters, and creating a graph based on the input threshold.
+seprtability.py - calculates a seperability energy metric for each graph to pick the best graph.
+bhattacharyaDist.py - to caluculate the bhattacharya distance between two continuous probability distributions.
+distanceMatrix.py - create the DM matrix containing Bhattacharya distance from each PD to other.
+subSample.py - uniform binnned subsampling for LHDataAnalysis.py script use
+subSample2.py - uniform binnned subsampling for occint.py script use
+
+Output file descrition in file_output_format.txt
+
+Flags:
+skip_ss_clus_flag - to skip LH clusterin provided we already have that pre computed in a pickle file
+skip_algo_flag - to skip the graph and material file writing step provided we already have the materials.txt file written.
+skip_oiss_flag - to skip the occint clustering step provided we have the precomputed data in the pickle file.
+
+Hyperparameter Settings:
+LH meanshift parameter: quantile value(q)- 0<=q<=0.5 but for big datasets, good to keep at a low value, in code this is set to 0.01, this can be a test of robustness of the algorithm; minimum bin size - to speed up clustering we provide minimum bin size for the intial seeding of the algorithm, we set it to 3 to test the robustness of the algorithm. will work similarily for the occint clustering as well  
+
+Subsampling fraction setting in the subsample.py and subsample2.py file we set it to 40% subsampling with minimum bound of 50,000 points and maximum bound of 100,000 points.
+
+HDBscan hyperparameter setting - 
+
