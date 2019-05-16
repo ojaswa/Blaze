@@ -12,5 +12,5 @@ Blaze provides the following volume analysis and rendering capabilities:
 
 ---
 The code corrsponds to the following CGF publication and is allowed to be used for academic and research purpose (non-commercial):  
-*[Ojaswa Sharma, Tushar Arora, and Apoorv Khattar. "Graph based transfer function for volume rendering." Computer Graphics Forum, 2019](https://google.com).*  
+*[Ojaswa Sharma, Tushar Arora, and Apoorv Khattar. "Graph based transfer function for volume rendering." Computer Graphics Forum, 2019](https://doi.org/10.1111/cgf.13663).*  
 Please cite the paper in case you choose to use this code.
